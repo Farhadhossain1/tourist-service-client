@@ -32,7 +32,7 @@ const router = createBrowserRouter([
         {
           path:"/service/:id",
           element:<ServiceDetails></ServiceDetails>,
-          loader: ({params})=> fetch(`http://localhost:5000/service/${params._id}`)
+          loader: ({params})=> fetch(`http://localhost:5000/service/${params.id}`)
         }
       ]
     }
