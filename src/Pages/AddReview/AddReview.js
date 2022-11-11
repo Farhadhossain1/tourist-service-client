@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/UserContext/UserContext';
+import './AddReview.css';
 
 const AddReview = () => {
     const {user} = useContext(AuthContext);
@@ -40,7 +41,7 @@ const AddReview = () => {
     }
 
     return (
-       <div>
+       <div className='review'>
          <div className='lg:w-1/2 mx-auto text-center'>
             <form onSubmit={handleReviewAdd}>
                 <p>Add Review</p>
