@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import toast from "react-hot-toast";
 import { AuthContext } from '../../context/UserContext/UserContext';
 import MyReviewCard from '../MyReviewCard/MyReviewCard';
 
@@ -23,7 +24,7 @@ const MyReview = () => {
             if(data.deletedCount > 0){
                 const remain = myReviews.filter(mr => mr._id !== id);
                 setMyReviews(remain);
-                alert("Deleted Successfully")
+               toast.success("Deleted Successfully")
             }
         })
     }

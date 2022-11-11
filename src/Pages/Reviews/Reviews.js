@@ -13,15 +13,31 @@ const Reviews = ({service}) => {
         .then(data => setReviews(data))
     },[title])
     return (
-        <div>
+        <div className='my-8'>
             <div>
                 {reviews.map(review => <ReviewCard key={review._id} review={review}></ReviewCard>)}
             </div>
+
            {
-            user?.uid ? <Link to={`/addReview/${_id}`}>YOU CAN REVIEW NOW</Link> : <Link to='/login'>YOU ARE LOG OUT, PLEASE LOG IN</Link>
+            user?.uid ? <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card-body">
+              <h2 className="card-title">YOU CAN REVIEW NOW</h2>
+              <div className="card-actions justify-end">
+                <Link to={`/addReview/${_id}`}><button className="btn btn-primary">Go to Review</button></Link>
+              </div>
+            </div>
+          </div> : <div className="card w-96 bg-base-100 shadow-xl">
+  <div className="card-body">
+    <h2 className="card-title">You Are Log Out. To Review , Please Log In</h2>
+    <div className="card-actions justify-end">
+    <Link to="/login"><button className="btn btn-primary">Login</button></Link>
+    </div>
+  </div>
+</div>
            }
         </div>
     );
 };
 
 export default Reviews;
+          

@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/UserContext/UserContext';
+
 
 
 const Signup = () => {
@@ -20,6 +22,7 @@ const Signup = () => {
       const user = result.user;
       console.log(user);
       handleUpdate(name, photoURL);
+      toast.success("Sign Up SuccessFull")
     })
   }
 

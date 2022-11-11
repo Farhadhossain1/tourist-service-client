@@ -1,5 +1,6 @@
 import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/UserContext/UserContext';
@@ -19,6 +20,7 @@ const Login = () => {
     .then(result =>{
       const user = result.user;
       console.log(user);
+      toast.success("Successfully login")
     })
     .catch(error =>console.error(error))
   }
@@ -34,6 +36,7 @@ const Login = () => {
     .then(result =>{
       const user = result.user;
       console.log(user);
+      toast.success("Login Successful")
       navigate(from, {replace: true});
     })
 
