@@ -1,10 +1,25 @@
 import React from 'react';
 
 const ReviewCard = ({review}) => {
-    const {comment} = review;
+    const {comment, img, name} = review;
+    console.log(img)
     return (
         <div>
-            <p>{comment}</p>
+            <div className="card card-side bg-base-100 shadow-xl">
+                <figure><div className="avatar">
+                <div className="w-20 h-20 rounded-full">
+                    <img src={img}  alt=""/>
+                </div>
+                </div>
+                </figure>
+                <div className="card-body">
+                    <h2 className="card-title">{name}</h2>
+                    <p>{comment}</p>
+                    <div className="card-actions justify-end">
+                    <button className="btn btn-primary">Watch</button>
+                    </div>
+                </div>
+                </div>
         </div>
     );
 };

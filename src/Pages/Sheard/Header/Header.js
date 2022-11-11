@@ -3,12 +3,21 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../context/UserContext/UserContext';
 
 const Header = () => {
+  const {user, logout} = useContext(AuthContext);
 
-  const {user} = useContext(AuthContext);
   const menuItem = <>
   <li><Link to='/'>Home</Link></li>
-  <li><Link to='/login'>Login</Link></li>
-  <li><Link to='signup'>SignUp</Link></li>
+  {
+    user?.uid ?
+    <>
+    <li><Link>My Review</Link></li>
+    <li><Link>Add Service</Link></li>
+    <li onClick={logout}><Link>Logout</Link></li>
+    </>
+     :
+      <><li><Link to='/login'>Login</Link></li>
+      <li><Link to='signup'>SignUp</Link></li></>
+  }
   </>
   return (
     <div className="navbar bg-base-100">

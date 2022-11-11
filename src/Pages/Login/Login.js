@@ -7,7 +7,7 @@ import { AuthContext } from '../../context/UserContext/UserContext';
 
 
 const Login = () => {
-  const {providerLogIn} =useContext(AuthContext);
+  const {providerLogIn, login} =useContext(AuthContext);
 
   const googleProvider = new GoogleAuthProvider();
   const handleGoogleSignIn = () =>{
@@ -25,6 +25,12 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     console.log(email,password)
+
+    login(email, password)
+    .then(result =>{
+      const user = result.user;
+      console.log(user);
+    })
 
   }
   return (
