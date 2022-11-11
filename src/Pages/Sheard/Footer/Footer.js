@@ -3,7 +3,7 @@ import logo from "../../../assets/travel.png";
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-black text-white">
+        <footer className="footer p-10 bg-black text-white mt-24">
   <div>
    <img  className=' rounded-xl w-16' src={logo} alt="" />
     <p>I Am Harry.<br/>Providing reliable tour, experience since 1992</p>

@@ -16,7 +16,7 @@ const Home = () => {
                 }
             </div>
             <div className='text-center my-5'>
-                <Link to="/services"><button className='btn'>SEE ALL</button></Link>
+                <Link to="/services"><button className='btn px-16'>SEE ALL</button></Link>
             </div>
         </div>
     );

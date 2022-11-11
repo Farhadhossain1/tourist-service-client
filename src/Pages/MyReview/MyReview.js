@@ -8,14 +8,14 @@ const MyReview = () => {
 
     const [myReviews, setMyReviews] = useState([]);
     useEffect(()=>{
-        fetch(`http://localhost:5000/myReviews?email=${user?.email}`)
+        fetch(`https://tourist-service-server-ebon.vercel.app/myReviews?email=${user?.email}`)
         .then(res => res.json())
         .then(data => setMyReviews(data))
     },[user?.email])
 
 
     const handleDelete = id =>{
-        fetch(`http://localhost:5000/myReviews/${id}`,{
+        fetch(`https://tourist-service-server-ebon.vercel.app/myReviews/${id}`,{
             method : "DELETE"
         })
         .then(res => res.json())

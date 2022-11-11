@@ -18,7 +18,7 @@ const AddService = () => {
             description,
             date: new Date()
         }
-        fetch("http://localhost:5000/services",{
+        fetch("https://tourist-service-server-ebon.vercel.app/services",{
             method: "POST",
             headers : {
                 "content-type" : "application/json"

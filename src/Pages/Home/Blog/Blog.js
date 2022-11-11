@@ -3,7 +3,7 @@ import React from 'react';
 const Blog = () => {
     return (
         <div>
-            <div className=' mt-4'>
+            <div className=' mt-4 '>
                 <h2 className='text-3xl'>What is difference between SQL and NoSQL ?</h2>
                 <p>SQL pronounced as “S-Q-L” or as “See-Quel” is primarily called RDBMS or Relational Databases, whereas NoSQL is a Non-relational or Distributed Database.Comparing SQL vs NoSQL databases, SQL databases are table-based databases, whereas NoSQL databases can be document-based, key-value pairs, and graph databases.SQL databases are vertically scalable, while NoSQL databases are horizontally scalable.SQL databases are vertically scalable, while NoSQL databases are horizontally scalable.Comparing NoSQL vs SQL performance, SQL requires specialized DB hardware for better performance while NoSQL uses commodity hardware.</p>
             </div>

@@ -19,7 +19,7 @@ const router = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>,
-            loader: ()=> fetch("http://localhost:5000/limitServices")
+            loader: ()=> fetch("https://tourist-service-server-ebon.vercel.app/limitServices")
         },
         {
           path: '/login',
@@ -32,17 +32,17 @@ const router = createBrowserRouter([
         {
           path: "/services",
           element: <Services></Services>,
-          loader: ()=> fetch("http://localhost:5000/services")
+          loader: ()=> fetch("https://tourist-service-server-ebon.vercel.app/services")
         },
         {
           path:"/service/:id",
           element:<ServiceDetails></ServiceDetails>,
-          loader: ({params})=> fetch(`http://localhost:5000/service/${params.id}`)
+          loader: ({params})=> fetch(`https://tourist-service-server-ebon.vercel.app/service/${params.id}`)
         },
         {
           path: "/addReview/:id",
           element: <AddReview></AddReview>,
-          loader: ({params})=> fetch(`http://localhost:5000/service/${params.id}`)
+          loader: ({params})=> fetch(`https://tourist-service-server-ebon.vercel.app/service/${params.id}`)
         },
         {
           path: "/myReview",

@@ -45,7 +45,7 @@ const Header = () => {
     {user?.displayName
 }
   </div>
-    <Link className="btn">Get started</Link>
+    
   </div>
 </div>
   );
