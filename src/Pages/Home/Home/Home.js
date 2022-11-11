@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import Banner from '../Banner/Banner';
 import ServiceCard from '../ServiceCard/ServiceCard';
 
 const Home = () => {
@@ -7,7 +8,9 @@ const Home = () => {
     console.log(services)
     return (
         <div>
-            <div className='grid lg:grid-cols-3 gap-6'>
+            <Banner></Banner>
+            
+            <div className='grid lg:grid-cols-3 gap-6 mt-16'>
                 {
                     services.map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)
                 }

@@ -1,0 +1,8 @@
+.banner {
+  background: rgba(0, 0, 0, 0.4)
+    url("https://img.freepik.com/free-photo/spectacular-night-sea-coast-with-city-cruise-ship-lights-reflected-water_158595-6954.jpg?w=740&t=st=1668182328~exp=1668182928~hmac=b2f0b84d1900ef7bf5b750cf4879aff4cbe75c53cbf3c5c68a6fbeb9fa4a4909");
+  height: 90vh;
+  background-size: cover;
+  background-blend-mode: darken;
+  border-radius: 4px;
+}
