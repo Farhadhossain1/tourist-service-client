@@ -6,8 +6,9 @@ const ReviewCard = ({review}) => {
     return (
         <div>
             <div className="card card-side bg-base-100 shadow-xl">
-                <figure><div className="avatar">
-                <div className="w-20 h-20 rounded-full">
+                <figure>
+                    <div className="avatar">
+                <div className="w-full h-20 rounded-full">
                     <img src={img}  alt=""/>
                 </div>
                 </div>
